@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # kuzmenko
 
 ## Project setup
@@ -27,3 +28,6 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+=======
+# kuzmenko.tk
+>>>>>>> 85562006ab0c25010b1a62ac15786a30179f6138

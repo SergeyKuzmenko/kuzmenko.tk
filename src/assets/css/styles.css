@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Comfortaa&display=swap&subset=cyrillic");
+@import url("https://fonts.googleapis.com/css?family=Nunito&display=swap&subset=cyrillic,cyrillic-ext");
 
 html {
     position: relative;
@@ -9,7 +9,7 @@ html {
 }
 
 body {
-    font-family: 'Comfortaa', sans-serif;
+    font-family: 'Nunito', sans-serif;
     color: #324e63;
     overflow-y: scroll;
 
@@ -186,6 +186,7 @@ a, a:hover {
     flex-wrap: wrap;
     align-items: flex-start;
     margin-top: 35px;
+    text-decoration: none;
 }
 
 .profile-card-inf__item {
@@ -208,6 +209,10 @@ a, a:hover {
     font-weight: 700;
     font-size: 22px; /*27*/
     color: #324e63;
+    text-decoration: none;
+}
+.profile-card-inf__title:hover {
+    text-decoration: none;
 }
 
 .profile-card-inf__txt {
@@ -309,7 +314,7 @@ a, a:hover {
 .profile-card__button {
     background: none;
     border: none;
-    font-family: 'Comfortaa', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-weight: 700;
     font-size: 19px;
     margin: 15px 35px;
@@ -448,7 +453,7 @@ a, a:hover {
     padding: 15px 20px;
     color: #324e63;
     font-weight: 500;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Nunito', sans-serif;
     outline: none;
     transition: all .3s;
 }

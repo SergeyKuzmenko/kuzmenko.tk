@@ -14,9 +14,9 @@
 </template>
 
 <script>
-    export default {
-        name: "BlogPostSkeleton"
-    }
+export default {
+  name: 'BlogPostSkeleton'
+}
 </script>
 
 <style scoped>

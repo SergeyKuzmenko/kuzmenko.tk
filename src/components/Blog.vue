@@ -1,6 +1,6 @@
 <template>
     <div class="page page-blog">
-        <!--<BackButton></BackButton>-->
+        <BackButton></BackButton>
         <div class="content">
             <h3 class="content-header">{{$t("blog")}}</h3>
             <p v-if="loading">

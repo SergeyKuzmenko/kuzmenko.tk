@@ -1,147 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-          name="viewport">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" name="viewport">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <link href="<%= BASE_URL %>favicon.ico" rel="icon">
     <title>Sergey Kuzmenko</title>
     <style>
-        * {
-            box-sizing: border-box;
+    * {
+        box-sizing: border-box;
+    }
+
+    html,
+    body,
+    .background {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        overflow: hidden;
+    }
+
+    .background {
+        z-index: 999;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        background: #2C3E50;
+        background: -webkit-linear-gradient(to top, #4CA1AF, #2C3E50);
+        background: linear-gradient(to top, #4CA1AF, #2C3E50);
+    }
+
+    .loader {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    .dot {
+        background: white;
+        margin: 5px;
+        -webkit-animation-name: loader;
+        animation-name: loader;
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+        -webkit-animation-direction: alternate;
+        animation-direction: alternate;
+    }
+
+    .dot:nth-child(1) {
+        -webkit-animation-delay: 0.2s;
+        animation-delay: 0.2s;
+    }
+
+    .dot:nth-child(2) {
+        -webkit-animation-delay: 0.4s;
+        animation-delay: 0.4s;
+    }
+
+    .dot:nth-child(3) {
+        -webkit-animation-delay: 0.6s;
+        animation-delay: 0.6s;
+    }
+
+    .dot:nth-child(4) {
+        -webkit-animation-delay: 0.8s;
+        animation-delay: 0.8s;
+    }
+
+    .dot:nth-child(5) {
+        -webkit-animation-delay: 1s;
+        animation-delay: 1s;
+    }
+
+    @-webkit-keyframes loader {
+        from {
+            width: 2px;
+            height: 2px;
+            border-radius: 1px;
         }
 
-        html, body, .background {
-            height: 100%;
-            width: 100%;
-            margin: 0;
-            overflow: hidden;
+        to {
+            width: 20px;
+            height: 20px;
+            border-radius: 10px;
+        }
+    }
+
+    @keyframes loader {
+        from {
+            width: 2px;
+            height: 2px;
+            border-radius: 1px;
         }
 
-        .background {
-            z-index: 999;
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
-            justify-content: center;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            align-items: center;
-            height: 100%;
-            width: 100%;
-            background: -webkit-linear-gradient(-20deg, #ff2846 0%, #6944ff 100%);
-            background: linear-gradient(-20deg, #ff2846 0%, #6944ff 100%);
-            /* default style */
-            /*background: -webkit-linear-gradient(45deg, #6200ea, #d500f9);
-            background: linear-gradient(45deg, #6200ea, #d500f9);*/
+        to {
+            width: 20px;
+            height: 20px;
+            border-radius: 10px;
         }
+    }
 
-        .loader {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            align-items: center;
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
-            justify-content: center;
-        }
-
-        .dot {
-            background: white;
-            margin: 5px;
-            -webkit-animation-name: loader;
-            animation-name: loader;
-            -webkit-animation-duration: 1s;
-            animation-duration: 1s;
-            -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
-            -webkit-animation-direction: alternate;
-            animation-direction: alternate;
-        }
-
-        .dot:nth-child(1) {
-            -webkit-animation-delay: 0.2s;
-            animation-delay: 0.2s;
-        }
-
-        .dot:nth-child(2) {
-            -webkit-animation-delay: 0.4s;
-            animation-delay: 0.4s;
-        }
-
-        .dot:nth-child(3) {
-            -webkit-animation-delay: 0.6s;
-            animation-delay: 0.6s;
-        }
-
-        .dot:nth-child(4) {
-            -webkit-animation-delay: 0.8s;
-            animation-delay: 0.8s;
-        }
-
-        .dot:nth-child(5) {
-            -webkit-animation-delay: 1s;
-            animation-delay: 1s;
-        }
-
-        @-webkit-keyframes loader {
-            from {
-                width: 2px;
-                height: 2px;
-                border-radius: 1px;
-            }
-            to {
-                width: 20px;
-                height: 20px;
-                border-radius: 10px;
-            }
-        }
-
-        @keyframes loader {
-            from {
-                width: 2px;
-                height: 2px;
-                border-radius: 1px;
-            }
-            to {
-                width: 20px;
-                height: 20px;
-                border-radius: 10px;
-            }
-        }
-
-        .hidden {
-            display: none;
-        }
+    .hidden {
+        display: none;
+    }
     </style>
 </head>
+
 <body>
-<noscript>
-    <strong>We're sorry but this app doesn't work properly without JavaScript enabled. Please enable it to
-        continue.</strong>
-</noscript>
-<div class="background">
-    <div class="loader">
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
+    <noscript>
+        <strong>We're sorry but this app doesn't work properly without JavaScript enabled. Please enable it to
+            continue.</strong>
+    </noscript>
+    <div class="background">
+        <div class="loader">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
     </div>
-</div>
-<div class="hidden" id="app"></div>
-<script>
+    <div class="hidden" id="app"></div>
+    <script>
     let preloader = document.querySelector('.background');
     let wrapper = document.getElementById('app');
-    window.addEventListener('load', function () {
+    window.addEventListener('load', function() {
         preloader.remove();
         wrapper.classList.remove('hidden');
     });
-</script>
+    </script>
 </body>
+
 </html>

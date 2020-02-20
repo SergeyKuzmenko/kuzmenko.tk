@@ -6,7 +6,7 @@
           <i class="sl-select-lang select-lang-icon"></i>
           <div class="triangle"></div>
           <ul>
-            <li v-for="lang in langs" :key="lang.code" @click="$root.$i18n.locale = lang.code">
+            <li v-for="lang in langs" :key="lang.code" @click="setLocale(lang.code)">
               <i :class="'sl-flag flag-' + lang.code"></i>
               <span>{{lang.name}}</span>
             </li>
@@ -16,14 +16,12 @@
     </div>
   </div>
 </template>
-
 <script>
 export default {
   name: 'ChangeLang',
-  data () {
+  data() {
     return {
-      langs: [
-        {
+      langs: [{
           name: 'English',
           code: 'en'
         },
@@ -37,10 +35,16 @@ export default {
         }
       ]
     }
+  },
+  methods: {
+    setLocale(locale) {
+      this.$root.$i18n.locale = locale
+      localStorage.setItem('locale', locale)
+    }
   }
 }
-</script>
 
+</script>
 <style scoped>
 .sl-nav {
   display: inline;
@@ -135,6 +139,7 @@ export default {
   top: 2px;
   overflow: hidden;
 }
+
 .sl-select-lang {
   display: inline-block;
   box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
@@ -172,4 +177,5 @@ export default {
   background-size: cover;
   background-position: center center;
 }
+
 </style>

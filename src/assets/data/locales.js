@@ -16,7 +16,8 @@ export default {
     skills: 'Skills',
     contact_info: 'Contact Info',
     hobbies: 'Hobbies',
-    hire_me: 'Hire me'
+    hire_me: '🛠 Hire me',
+    about: 'Hello! My name is <strong>Sergey</strong>. Now I work with machines with <abbr title="Numerically controlled machines">CNC</abbr>, but in the future I want to devote myself to Web development.'
   },
   ru: {
     lang: 'Язык',
@@ -35,7 +36,9 @@ export default {
     skills: 'Навыки',
     contact_info: 'Контактная информация',
     hobbies: 'Хобби',
-    hire_me: 'Найми меня'
+    hire_me: '🛠 Нанять меня',
+    about: 'Здравствуйте! Меня зовут <strong>Сергей</strong>. Сейчас я работаю cо станками с <abbr title="Станки с числовым программным управлением">ЧПУ</abbr>, но в дальнейшем хочу посвятить себя Web-разработке.'
+
   },
   ua: {
     lang: 'Мова',
@@ -54,6 +57,8 @@ export default {
     skills: 'Навички',
     contact_info: 'Контактна інформація',
     hobbies: 'Хобі',
-    hire_me: 'Найняти мене'
+    hire_me: '🛠 Найняти мене',
+    about: 'Вітаю! Мене звати <strong>Сергій</strong>. Зараз я працюю на верстатах з <abbr title="Верстати з числовим програмним управлінням">ЧПУ</abbr>, але в подальшому хочу присвятити себе Web-розробці.'
+
   }
 }

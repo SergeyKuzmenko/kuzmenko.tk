@@ -3,17 +3,16 @@
     <div class="content">
       <ChangeLang class="change-lang"></ChangeLang>
       <ProfileImage></ProfileImage>
-
       <div class="profile-card__cnt js-profile-cnt">
         <div class="profile-card__name">{{$t("full_name")}}</div>
-        <div class="profile-card__txt">
+        <!-- <div class="profile-card__txt">
           <i class="em em-wave"></i>
           {{$t("welcome")}}
           <strong>
             {{$t("country")}}
             <i class="em em-flag-ua"></i>
           </strong>
-        </div>
+        </div> -->
         <div class="profile-card-loc">
           <span class="profile-card-loc__icon">
             <svg class="icon">

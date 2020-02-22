@@ -14,10 +14,10 @@
 
 <style scoped>
 a {
-	color: #0033CCFF;
+	color: black;
 }
 .link-back {
 	cursor: pointer;
-	color: #0033CCFF;
+	color: black;
 }
 </style>

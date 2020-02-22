@@ -1,7 +1,7 @@
 <template>
     <div class="page page-not-found">
         <div class="content container">
-			 <p>PAGE NOT FOUND</p>
+			 <p>{{ $t("page_not_found") }}</p>
         </div>
     </div>
 </template>
@@ -9,7 +9,12 @@
 <script>
 export default {
   name: 'PageNotFound',
-  components: {}
+  components: {},
+  created: function () {
+    this.$nextTick(function () {
+      document.title = this.$root.$t('page_not_found')
+    })
+  }
 }
 </script>
 

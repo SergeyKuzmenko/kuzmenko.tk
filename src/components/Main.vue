@@ -3,16 +3,9 @@
     <div class="content">
       <ChangeLang class="change-lang"></ChangeLang>
       <ProfileImage></ProfileImage>
+      
       <div class="profile-card__cnt js-profile-cnt">
         <div class="profile-card__name">{{$t("full_name")}}</div>
-        <!-- <div class="profile-card__txt">
-          <i class="em em-wave"></i>
-          {{$t("welcome")}}
-          <strong>
-            {{$t("country")}}
-            <i class="em em-flag-ua"></i>
-          </strong>
-        </div> -->
         <div class="profile-card-loc">
           <span class="profile-card-loc__icon">
             <svg class="icon">
@@ -78,17 +71,9 @@ export default {
     }
   },
   created: function () {
-    // this.$i18n.locale = this.getUserLang();
-  },
-  methods: {
-    getUserLang: function () {
-      let language = window.navigator
-        ? window.navigator.language ||
-          window.navigator.systemLanguage ||
-          window.navigator.userLanguage
-        : 'ru'
-      return language.substr(0, 2).toLowerCase()
-    }
+    this.$nextTick(function () {
+      document.title = this.$root.$t('full_name')
+    })
   },
   components: {
     Icons,
@@ -99,6 +84,12 @@ export default {
 </script>
 
 <style scoped>
+a:hover {
+  text-decoration: none;
+}
+.profile-card-inf__title:hover {
+  text-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
 .change-lang {
   position: absolute;
   margin-left: auto;

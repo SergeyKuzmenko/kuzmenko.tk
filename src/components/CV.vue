@@ -252,6 +252,11 @@ export default {
         ]
       })
     }
+  },
+  created: function () {
+    this.$nextTick(function () {
+      document.title = this.$root.$t('full_name') + ' — ' + this.$root.$t('cv')
+    })
   }
 }
 

@@ -79,10 +79,20 @@ function getLocale() {
     return localStorage.getItem('locale')
   }
 }
+
 // Translate i18n
-console.log('Locale: ' + getLocale())
+let locale
+let allLocales = ['en', 'ru', 'ua']
+
+ // If not locale in locales -> return default 'en'
+if (allLocales.indexOf(getLocale()) !== -1) {
+  locale = getLocale()
+} else {
+  locale = 'en'
+}
+
 const i18n = new VueI18n({
-  locale: getLocale(),
+  locale,
   messages
 })
 
